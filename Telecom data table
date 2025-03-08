@@ -1,0 +1,14 @@
+Select product_name
+FROM products
+Where product_type="Internet";
+
+select customer_id
+FROM customer_subscriptions
+Where product_id=1;
+
+SELECT email
+FROM customer_subscriptions
+where product_id
+IN(SELECT product_id
+FROM products
+WHERE product_type="Internet");
